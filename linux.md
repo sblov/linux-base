@@ -478,7 +478,51 @@ case $1 in
         echo "ALL"
 ;;
 esac
-    
+ 
+#for
+for i in $@
+do
+        echo $i
+done
+
+sum=0
+for((i=1;i<100;i++))
+do
+        sum=$[$sum+$i]
+done
+echo $sum
+
+#while
+sum=0
+i=0
+while [ $i -le 10 ]
+do
+        sum=$[$sum+$i]
+        i=$[$i+1]
+done
+echo $sum
+```
+#### 读取控制台输入
+
+```shell
+
+read -p "input something : " value
+echo "value : $value"
+
+
+read -t 10 -p "input in 10s ..... : " value
+echo "value : $value"                    
+```
+
+#### shell系统函数
+
+```shell
+lov@linus:~$ basename  /home/lov/test.sh  .sh 
+test
+lov@linus:~$ basename  /home/lov/test.sh  sh
+test.
+lov@linus:~$ dirname  /home/lov/test.sh 
+/home/lov
 ```
 
 
@@ -498,3 +542,4 @@ esac
 |       |                             |
 |       |                             |
 
+****
