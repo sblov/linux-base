@@ -525,7 +525,21 @@ lov@linus:~$ dirname  /home/lov/test.sh
 /home/lov
 ```
 
+#### 自定义函数
 
+```shell
+function getSum(){
+        sum=$[$n1+$n2]
+        echo "result : $sum"
+}
+
+read -p "input n1:" n1
+read -p "input n2:" n2
+
+getSum $n1 $n2
+```
+
+### shell实例 .......
 
 # ＃
 
